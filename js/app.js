@@ -17,17 +17,26 @@ AppState.prototype.instantiateProducts = function () {
   }
 
 }
+function isImage (png){
+  returntypeof.png
+}
 
 AppState.prototype.saveToLocalStorage = function () {
   // TODO: Fill in this instance method to save product data to local storage
+  localStorage.setItem('allProducts', JSON.stringify(this.allProducts));
 }
 
 AppState.prototype.loadItems = function () {
 
   // TODO: Update this instance method to retrieve data from local storage instead of creating new Products on each page load
 
+  let productsData = localStorage.getItem('allProducts');
+  console.log(productsData);
+if (productsData){
+  this.allProducts=JSON.parse(productsData);
+}else {
   this.instantiateProducts();
-
+}
 }
 
 
