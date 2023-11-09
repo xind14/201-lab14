@@ -18,7 +18,7 @@ AppState.prototype.instantiateProducts = function () {
 
 }
 function isImage (png){
-  returntypeof.png
+  returntypeof.png b
 }
 
 AppState.prototype.saveToLocalStorage = function () {
